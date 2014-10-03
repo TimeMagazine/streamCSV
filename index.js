@@ -22,7 +22,6 @@ module.exports = function (opts, onLine, onClose) {
 
 	var rl = byline(filename);
 
-	// read each line from the original .dat file and match it up to codebook
 	rl.on('line', function(line) { 
 		if (!opts.noheader && !header) {	
 			header = line;
