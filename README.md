@@ -85,15 +85,15 @@ Note that the module correctly interpreted the numbers as numbers. If you don't 
 
 ##Options
 
-+`dontguess`: No type guessing, just import every data point as a string
++ `dontguess`: No type guessing, just import every data point as a string
 
-+`noheader`: The first line is a regular line of data, not a set of headers. Just give me back arrays of each line.
++ `noheader`: The first line is a regular line of data, not a set of headers. Just give me back arrays of each line.
 
-+`sparse`: If there is a header but the field value is blank, don't include it in the object for that row
++ `sparse`: If there is a header but the field value is blank, don't include it in the object for that row
 
-+`mode`: "csv" or "tsv". If unspecified, guesses from file extension.
++ `mode`: "csv" or "tsv". If unspecified, guesses from file extension.
 
 ##Dependencies
-+This module uses [d3](https://github.com/mbostock/d3)'s [csv parser](https://github.com/mbostock/d3/wiki/CSV) on each line.
++ This module uses [d3](https://github.com/mbostock/d3)'s [csv parser](https://github.com/mbostock/d3/wiki/CSV) on each line.
 
-+It uses a [fork](https://github.com/TimeMagazine/readline) of [maleck13's readline module](https://github.com/maleck13/readline) to convert the filestream into line-by-line events. The fork allows for the fact that most readline modules, including the [core module](http://nodejs.org/api/readline.html), often miss the last line of the file. The fork is distributed in this repo. 
++ It uses a [fork](https://github.com/TimeMagazine/readline) of [maleck13's readline module](https://github.com/maleck13/readline) to convert the filestream into line-by-line events. The fork allows for the fact that most readline modules, including the [core module](http://nodejs.org/api/readline.html), often miss the last line of the file. The fork is distributed in this repo. 
