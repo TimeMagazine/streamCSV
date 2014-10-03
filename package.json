@@ -1,5 +1,5 @@
 {
-  "name": "stream-csv",
+  "name": "streamCSV",
   "version": "0.0.0",
   "description": "Open a large CSV file line-by-line, applying headers to each row",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TimeMagazine/stream-csv"
+    "url": "https://github.com/TimeMagazine/streamCSV"
   },
   "keywords": [
     "csv",
@@ -21,7 +21,7 @@
   "author": "Chris Wilson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TimeMagazine/stream-csv/issues"
+    "url": "https://github.com/TimeMagazine/streamCSV/issues"
   },
-  "homepage": "https://github.com/TimeMagazine/stream-csv"
+  "homepage": "https://github.com/TimeMagazine/streamCSV"
 }
