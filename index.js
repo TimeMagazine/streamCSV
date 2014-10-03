@@ -1,5 +1,4 @@
-var fs = require("fs"),
-	d3 = require("d3"),
+var d3 = require("d3"),
 	byline = require('./lib/readline');
 
 module.exports = function (opts, onLine, onClose) {
@@ -16,8 +15,7 @@ module.exports = function (opts, onLine, onClose) {
 		var filename = opts.filename;
 	}
 
-	var instream = fs.createReadStream(filename, "utf8"),
-		mode = opts.mode ? opts.mode.toLowerCase() : (/\.tsv$/.test(filename) ? "tsv" : "csv"),
+	var mode = opts.mode ? opts.mode.toLowerCase() : (/\.tsv$/.test(filename) ? "tsv" : "csv"),
 		header;
 
 	var rl = byline(filename);
