@@ -1,7 +1,6 @@
 var fs = require("fs"),
 	d3 = require("d3"),
-	byline = require('./node_modules/readline'),
-	opts = require('minimist')(process.argv.slice(2));
+	byline = require('./lib/readline');
 
 module.exports = function (opts, onLine, onClose) {
 	var count = 0;
@@ -71,6 +70,9 @@ var reserved = {
 };
 
 var guessType = module.guessType = function(str) {
+	if (typeof str === "undefined") {
+		return null;
+	}
 	if (/^-?\d+$/.test(str)) {
 		return parseInt(str, 10);
 	} else if (/^-?\d*\.\d+$/.test(str)) {

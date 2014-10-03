@@ -16,8 +16,7 @@
     "stream"
   ],
   "dependencies": {
-    "d3": "*",
-    "minimist": "*"
+    "d3": "*"
   },
   "author": "Chris Wilson",
   "license": "MIT",
