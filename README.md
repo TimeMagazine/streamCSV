@@ -5,7 +5,7 @@ read a CSV or TSV file line-by-line, applying headers to each row. Convenient fo
 
 ##Installation
 
-	npm install stream-csv
+	npm install node-stream-csv
 
 ## How to use
 
@@ -86,8 +86,11 @@ Note that the module correctly interpreted the numbers as numbers. If you don't 
 ##Options
 
 +`dontguess`: No type guessing, just import every data point as a string
+
 +`noheader`: The first line is a regular line of data, not a set of headers. Just give me back arrays of each line.
+
 +`sparse`: If there is a header but the field value is blank, don't include it in the object for that row
+
 +`mode`: "csv" or "tsv". If unspecified, guesses from file extension.
 
 ##Dependencies

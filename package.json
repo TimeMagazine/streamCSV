@@ -1,5 +1,5 @@
 {
-  "name": "streamCSV",
+  "name": "node-stream-csv",
   "version": "0.0.0",
   "description": "Open a large CSV file line-by-line, applying headers to each row",
   "main": "index.js",
