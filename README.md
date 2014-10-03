@@ -3,6 +3,8 @@ stream-csv
 
 read a CSV or TSV file line-by-line, applying headers to each row. Convenient for very large files.
 
+[![Build Status](https://travis-ci.org/TimeMagazine/streamCSV.png)](https://travis-ci.org/TimeMagazine/streamCSV)
+
 ##Installation
 
 	npm install node-stream-csv
