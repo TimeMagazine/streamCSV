@@ -4,7 +4,7 @@
   "description": "Open a large CSV file line-by-line, applying headers to each row",
   "main": "index.js",
   "scripts": {
-    "test": "./test/test.js"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
