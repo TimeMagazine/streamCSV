@@ -95,5 +95,5 @@ Note that the module correctly interpreted the numbers as numbers. If you don't 
 
 ##Dependencies
 +This module uses [d3](https://github.com/mbostock/d3)'s [csv parser](https://github.com/mbostock/d3/wiki/CSV) on each line.
-+It uses a [fork](https://github.com/TimeMagazine/readline) of [maleck13's readline module](https://github.com/maleck13/readline) to convert the filestream into line-by-line events. The fork allows for the fact that most readline modules, including the [core module](http://nodejs.org/api/readline.html), often miss the last line of the file. The fork is distributed in this repo. 
 
++It uses a [fork](https://github.com/TimeMagazine/readline) of [maleck13's readline module](https://github.com/maleck13/readline) to convert the filestream into line-by-line events. The fork allows for the fact that most readline modules, including the [core module](http://nodejs.org/api/readline.html), often miss the last line of the file. The fork is distributed in this repo. 
