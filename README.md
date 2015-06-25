@@ -17,7 +17,7 @@ read a CSV or TSV file line-by-line, applying headers to each row. Convenient fo
 
 These are all examples from `test/test.js`
 
-	var streamCSV = require("stream-csv");
+	var streamCSV = require("node-stream-csv");
 
 	streamCSV("state_population.tsv", function(county) {
 		console.log(county);
