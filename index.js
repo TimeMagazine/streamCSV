@@ -15,6 +15,11 @@ module.exports = function (opts, onLine, onClose) {
 		var filename = opts.filename;
 	}
 
+	// you can pass specific fields to not convert to native type as comma-delimited
+	if (opts.dontguess && typeof opts.dontguess === "string") {
+		opts.dontguess = opts.dontguess.split(",");
+	}
+
 	var mode = opts.mode ? opts.mode.toLowerCase() : (/\.tsv$/.test(filename) ? "tsv" : "csv"),
 		header;
 
@@ -40,10 +45,13 @@ module.exports = function (opts, onLine, onClose) {
 			}
 
 			// convert to native type unless asked not to
-			if (!opts.dontguess) {
+			if (opts.dontguess !== true) {
 				for (var key in datum) if (datum.hasOwnProperty(key)) {
-					//console.log(key, datum[key]);
-					datum[key] = guessType(datum[key]);
+					if (typeof opts.dontguess !== "object" || opts.dontguess.indexOf(key) == -1) {
+						datum[key] = guessType(datum[key]);
+					} else {
+						//console.log("Ignoring " + key);
+					}
 				}
 			}
 			onLine(datum, count);

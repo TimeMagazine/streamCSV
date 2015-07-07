@@ -1,7 +1,8 @@
-stream-csv
+streamCSV
 ==========
+v0.0.2
 
-read a CSV or TSV file line-by-line, applying headers to each row. Convenient for very large files.
+Read a CSV or TSV file line-by-line, applying headers to each row and guessing the correct type for each entry. Convenient for very large files.
 
 [![Build Status](https://travis-ci.org/TimeMagazine/streamCSV.png)](https://travis-ci.org/TimeMagazine/streamCSV)
 
@@ -19,8 +20,8 @@ These are all examples from `test/test.js`
 
 	var streamCSV = require("node-stream-csv");
 
-	streamCSV("state_population.tsv", function(county) {
-		console.log(county);
+	streamCSV("state_population.tsv", function(state) {
+		console.log(state);
 	});
 
 	/* Input
@@ -87,7 +88,7 @@ Note that the module correctly interpreted the numbers as numbers. If you don't 
 
 ##Options
 
-+ `dontguess`: No type guessing, just import every data point as a string
++ `dontguess`: No type guessing, just import every data point as a string. You can also pass a comma-separated list of fields not to guess on
 
 + `noheader`: The first line is a regular line of data, not a set of headers. Just give me back arrays of each line.
 

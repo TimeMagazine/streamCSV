@@ -47,10 +47,31 @@ function test3(cb) {
 	);
 }
 
+function test4(cb) {
+	// don't guess certain
+	streamCSV(
+		{
+			filename: __dirname + "/county_population.csv",
+			dontguess: "SUMLEV,REGION,DIVISION"
+		},
+		function(datum, c) {
+			if (c == 0) {
+				console.log("See, only SUMLEV,REGION,DIVISION are unguessed for type:", datum);
+			}
+			process.stdout.write("Read " + c + " lines from county file.\r");
+		},
+		function() { // on close 
+			cb();
+		}		
+	);
+}
+
 test1(function() {
 	test2(function() {
 		test3(function() {
-			console.log("\nDone!");
+			test4(function() {
+				console.log("\nDone!");
+			});
 		});
 	});
 });
