@@ -25,14 +25,14 @@ module.exports = function (opts, onLine, onClose) {
 
 	var rl = byline(filename);
 
-	rl.on('line', function(line) { 
-		if (!opts.noheader && !header) {	
+	rl.on('line', function(line) {
+		if (!opts.noheader && !header) {
 			header = line;
 		} else {
 			if (opts.noheader) {
-				datum = d3[mode].parseRows(line)[0];
+				datum = d3[mode + 'ParseRows'](line)[0];
 			} else {
-				datum = d3[mode].parse(header + "\n" + line)[0];
+				datum = d3[mode + 'Parse'](header + "\n" + line)[0];
 			}
 
 			// don't record blank rows if asked
@@ -63,7 +63,7 @@ module.exports = function (opts, onLine, onClose) {
 		if (onClose) {
 			onClose();
 		}
-	});	
+	});
 }
 
 // rudimentary type guessing. Can be improved upon
